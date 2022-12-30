@@ -1,0 +1,253 @@
+:root {
+    --clr-primary-100: hsl(171, 66%, 44%);
+    --clr-primary-200: hsl(233, 100%, 69%);
+    --clr-neutral-100: hsl(210, 10%, 33%);
+    --clr-neutral-200: hsl(201, 11%, 66%);
+    --clr-neutral-300: white;
+    --clr-neutral-400: hsl(220, 18%, 97%);
+
+    --ff-primary: 'Bai Jamjuree', sans-serif;
+
+}
+
+.display-flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-image: url(../images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    gap: 8em;
+    font-family: var(--ff-primary);
+    font-size: 1.125rem;
+    font-weight: 400;
+    text-align: center;
+    color: var(--clr-neutral-200);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--clr-neutral-100);
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+header,
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: min(90%, 30em);
+}
+
+header {
+    margin-top: 6em;
+}
+
+header img,
+.track__content img,
+p,
+footer li {
+    margin-bottom: 3em;
+}
+
+header img {
+    width: 8em;
+    align-self: center;
+}
+
+.download-btn {
+    gap: 1em;
+}
+
+.download-btn__ios,
+.download-btn__mac {
+    color: var(--clr-neutral-300);
+    font-weight: 600;
+    width: 80%;
+    height: 3.4em;
+    border-radius: 3em;
+    border: none;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.download-btn__ios {
+    background-color: var(--clr-primary-100);
+    box-shadow: 0 4px 1px hsl(171, 66%, 40%);
+}
+
+.download-btn__mac {
+    background-color: var(--clr-primary-200);
+    box-shadow: 0 4px 1px hsl(233, 100%, 65%);
+    ;
+}
+
+.download-btn__ios:hover,
+.download-btn__mac:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition-duration: 1s;
+}
+
+main {
+    gap: 8em;
+}
+
+.workflow__content img {
+    margin-inline: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.customers {
+    gap: 3em;
+
+}
+
+footer {
+    background-color: var(--clr-neutral-400);
+    width: 100%;
+    gap: 3em;
+}
+
+footer>img {
+    width: 4em;
+    margin-top: 3em;
+}
+
+footer ul {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--clr-neutral-100);
+    font-weight: 600;
+    transition: color 0.5s ease-out;
+}
+
+footer a:hover {
+    color: var(--clr-primary-100);
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    margin-bottom: 3em;
+}
+
+.socials a {
+    font-size: 2rem;
+}
+
+@media screen and (min-width: 63em) {
+    .download-btn {
+        flex-direction: row;
+        gap: 1em;
+        width: min(90%, 30em);
+        margin-inline: auto;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .track {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .track>h2,
+    .track>p,
+    .access,
+    header,
+    .clipboard {
+        width: auto;
+    }
+
+    .track__content {
+        display: flex;
+        gap: 3em;
+        width: 100%;
+    }
+
+    .track__content>img {
+        max-width: 60%;
+    }
+
+    .track__content__list {
+        text-align: start;
+    }
+
+    .workflow__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5em;
+        max-width: 90%;
+        margin-inline: auto;
+    }
+
+    .customers {
+        flex-direction: row;
+        width: 90%;
+    }
+
+    .flex-desktop {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer>img {
+        margin-top: 0;
+        margin-left: 3em;
+    }
+
+    footer .ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-auto-flow: column;
+        text-align: start;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        row-gap: 0.5em;
+    }
+
+    footer li {
+        margin-bottom: 0em;
+        display: grid;
+    }
+
+    .socials {
+        margin-bottom: 0em;
+        margin-right: 3em;
+    }
+
+}
